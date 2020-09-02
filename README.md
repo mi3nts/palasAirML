@@ -8,7 +8,7 @@ The current repo contains code to download and create .mat files for all  Partic
 The palas data is logged into a Google Drive Directory. To sync the said directory Rclone needs to be used. The following gives an indepth explanation in installing rclone and using it with google drive. 
 
 
-### Installation 
+### Rclone Installation 
  -  Download and unpack scripts 
  ```
   curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
@@ -233,7 +233,7 @@ e/n/d/r/c/s/q&gt;
 
 Usually with Mints Projects read only previledges are set as a precation. The final inputs for the rclone configuration can be kept as defaualt. 
 
-## Example shell script 
+##### Example shell script for Rclone 
 
 ```
 rclone -v sync palasStreamGoogleDrive:palasData/ /media/teamlary/Team_Lary_2/palasStreamPre/
