@@ -44,7 +44,7 @@ q) Quit config
 </pre>
 
 <pre>name&gt; </pre>
-Type in a name for your drive. This is a label(token) to be used when reffereing to the drive folder. This token will be used on the matlab script to sync Palas data to the host computer. 
+Type in a name for your drive. This is a label(token) to be used when reffereing to the drive folder. **This token will be used on the matlab script to sync Palas data to the host computer.** 
 Eg: <pre>name&gt; googleDrivePalasStream
 </pre>
 <pre>Type of storage to configure.
