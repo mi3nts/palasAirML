@@ -241,6 +241,29 @@ rclone -v sync palasStreamGoogleDrive:palasData/ /media/teamlary/Team_Lary_2/pal
 rsync -avzrtu /media/teamlary/Team_Lary_2/palasStreamPre/ /media/teamlary/Team_Lary_2/air930/mintsData/reference/palasStream
 ```
 
+## Operation
 
+Once Rclone is installed the YAML(mintsDefinitions.yaml) file needs to be modified. 
+<pre>── <font color="#729FCF"><b>palasAirML</b></font>
+│   ├── <font color="#729FCF"><b>firmware</b></font>
+│   │   └── <font color="#729FCF"><b>dataProcessing</b></font>
+│   │       ├── mintsDefinitions.yaml
+│   │       ├── PS001_palas2Mat.m
+</pre>
 
+Please choose a directory where you need to create the mints data files with the name 'mintsData'. Then point to the said folder on the yaml file under the label 'dataFolder'. The Rclone token for the google drive should be put under 'driveReferenceLabel'. Most Mints Data resampled within a pre defined period for synchronizing multiple data samples. To do so the data should be resampled to a unique time period. For the palas data its fit to resample to a period of 30 seconds. As such 30 can be put under timeSpan. An example implimentation of the YAML file is given below. 
+```
+dataFolder: "/media/teamlary/teamlary3/air930/mintsData"
+driveReferenceLabel: "googleDrivePalasStream"
+timeSpan: 30
+```
+
+Once the YAML file is updated you can run the 'PS001_palas2Mat.m' file under matlab. This should result in creating two .mat files for which concatinates all palas files from the Mints Ground Vehicle. The files are named 'palaceStream.mat' and 'palas.mat'. The 'palasStream.mat' files contains all particle size distribution data togeather with Particulate Matter Mass Fraction(PM1 PM2.5 PM4 PM10 PMTotal & Particle Number Concentration) data while 'palas.mat' only contains Particulate Matter Mass Fraction data. 
+
+<pre>── <font color="#729FCF"><b>mintsData</b></font>
+│   ├── <font color="#729FCF"><b>referenceMats</b></font>
+│   │   └── <font color="#729FCF"><b>palas</b></font>
+│   │       ├── palasStream.mat
+│   │       ├── palas.mat
+</pre>
 
