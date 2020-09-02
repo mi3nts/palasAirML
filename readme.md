@@ -258,12 +258,11 @@ driveReferenceLabel: "googleDrivePalasStream"
 timeSpan: 30
 ```
 
-Once the YAML file is updated you can run the 'PS001_palas2Mat.m' file under matlab. This should result in creating two .mat files for which concatinates all palas files from the Mints Ground Vehicle. The files are named 'palaceStream.mat' and 'palas.mat'. The 'palasStream.mat' files contains all particle size distribution data togeather with Particulate Matter Mass Fraction(PM1 PM2.5 PM4 PM10 PMTotal & Particle Number Concentration) data while 'palas.mat' only contains Particulate Matter Mass Fraction data. 
-
+Once the YAML file is updated you can run the 'PS001_palas2Mat.m' file under matlab. This should result in creating two .mat files for which concatinates all palas files from the Mints Ground Vehicle. The files are named 'palaceStream.mat' and 'palas.mat'.
 <pre>── <font color="#729FCF"><b>mintsData</b></font>
 │   ├── <font color="#729FCF"><b>referenceMats</b></font>
 │   │   └── <font color="#729FCF"><b>palas</b></font>
 │   │       ├── palasStream.mat
 │   │       ├── palas.mat
 </pre>
-
+The 'palasStream.mat' files contains all particle size distribution data togeather with Particulate Matter Mass Fraction(PM1 PM2.5 PM4 PM10 PMTotal & Particle Number Concentration) data while 'palas.mat' only contains Particulate Matter Mass Fraction data. 
