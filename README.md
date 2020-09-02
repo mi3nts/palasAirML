@@ -5,7 +5,7 @@ The current repo contains code to download and create .mat files for all  Partic
 
 
 ## Operation Pre Requisites 
-The palas data is logged into a Google Drive Directory. To sync the said directory Rclone needs to be used. The following gives an indepth explanation in installing rclone and using it with google drive. 
+The palas data is logged into a Google Drive Directory. To sync the said directory Rclone needs to be used. The relevent google drive credentions(UN & PW) will be privided on request. The following gives an indepth explanation in installing rclone and using it with google drive. 
 
 
 ### Rclone Installation 
@@ -44,7 +44,7 @@ q) Quit config
 </pre>
 
 <pre>name&gt; </pre>
-Type in a name for your drive. This is a label(token) to be used when reffereing to the drive folder.
+Type in a name for your drive. This is a label(token) to be used when reffereing to the drive folder. This token will be used on the matlab script to sync Palas data to the host computer. 
 Eg: <pre>name&gt; googleDrivePalasStream
 </pre>
 <pre>Type of storage to configure.
@@ -141,7 +141,8 @@ Enter a string value. Press Enter for the default (&quot;&quot;).
 client_id&gt;   </pre>
 
 At this point if you havent set up a client ID go to [https://rclone.org/drive/#making-your-own-client-id] and follow the insturctions given to gain a client ID and a secret ID. 
-Once you know the ID you can proceed in entering client and secret IDs.
+Once you know the ID you can proceed in entering client and secret IDs. 
+**Note: xxxxx and yyyyy are only given as examples for client ID and and client Secret.**
 
 <pre>Google Application Client Id
 Setting your own is recommended.
