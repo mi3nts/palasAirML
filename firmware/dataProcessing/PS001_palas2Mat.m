@@ -10,15 +10,16 @@ addpath("../../functions/")
 addpath("YAMLMatlab_0.4.3")
 mintsDefinitions  = ReadYaml('mintsDefinitions.yaml')
 
-dataFolder = mintsDefinitions.dataFolder;
+dataFolder          = mintsDefinitions.dataFolder;
 driveReferenceLabel = mintsDefinitions.driveReferenceLabel;
-
+timeSpan            = seconds(mintsDefinitions.timeSpan);
 
 folderCheck(dataFolder)
 referenceFolder     = dataFolder + "/reference";
 referenceMatsFolder = dataFolder + "/referenceMats";
 palasFolder         = referenceFolder       + "/palasStream";
 palasMatsFolder     = referenceMatsFolder   + "/palas";
+airMarMatsFolder     = referenceMatsFolder   + "/airmar";
 driveSyncFolder     = strcat(dataFolder,"/exactBackUps/palasStream/");
 
 display(newline)
@@ -47,7 +48,7 @@ display("Concatinating Palas Data")
 
 parfor fileIndex = 1: length(palasFiles)
         fileName            = strcat(palasFiles(fileIndex).folder,"/",palasFiles(fileIndex).name);
-        S{fileIndex}        = palasStreamRead(fileName,seconds(30));
+        S{fileIndex}        = palasStreamRead(fileName,timeSpan);
         palasStreamHeights(fileIndex) = height(S{fileIndex});
 end
 
@@ -82,7 +83,7 @@ load(strcat(palasFolder,"/palasFinal_08_22_2020.mat"))
 
 % Retiming with old data  
 display("Retiming with Old Palas Data")
-palas  = retime(sortrows([palasStream; palasDataNow]),'regular',@mean,'TimeStep',seconds(30));
+palas  = retime(sortrows([palasStream; palasDataNow]),'regular',@mean,'TimeStep',timeSpan);
 saveNamePalas      = strcat(palasMatsFolder,"/palas.mat");
 folderCheck(saveNamePalas)
 
