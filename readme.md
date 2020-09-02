@@ -265,4 +265,4 @@ Once the YAML file is updated you can run the 'PS001_palas2Mat.m' file under mat
 │   │       ├── palasStream.mat
 │   │       ├── palas.mat
 </pre>
-The 'palasStream.mat' files contains all particle size distribution data togeather with Particulate Matter Mass Fraction(PM1 PM2.5 PM4 PM10 PMTotal & Particle Number Concentration) data while 'palas.mat' only contains Particulate Matter Mass Fraction data. 
+The 'palasStream.mat' files contains all particle size distribution data togeather with Particulate Matter Mass Fraction (PM1 PM2.5 PM4 PM10 PMTotal & Particle Number Concentration) data while 'palas.mat' only contains Particulate Matter Mass Fraction data. 
