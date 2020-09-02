@@ -251,7 +251,7 @@ Once Rclone is installed the YAML(mintsDefinitions.yaml) file needs to be modifi
 │   │       ├── PS001_palas2Mat.m
 </pre>
 
-Please choose a directory where you need to create the mints data files with the name 'mintsData'. Then point to the said folder on the yaml file under the label 'dataFolder'. The Rclone token for the google drive should be put under 'driveReferenceLabel'. Most Mints Data resampled within a pre defined period for synchronizing multiple data samples. To do so the data should be resampled to a unique time period. For the palas data its fit to resample to a period of 30 seconds. As such 30 can be put under timeSpan. An example implimentation of the YAML file is given below. 
+Please choose a directory where you need to create the mints data files with the name 'mintsData'. Then point to the said folder on the yaml file under the label 'dataFolder'. The Rclone token for the google drive should be put under 'driveReferenceLabel'. Most Mints Data resampled within a pre defined period for synchronizing multiple data samples. To do so the data should be resampled to a unique time period. For the palas data its fit to resample to a period of 30 seconds. As such 30 can be put under timeSpan. An example implimentation of the YAML file is given below and is also given on the Repo. 
 ```
 dataFolder: "/media/teamlary/teamlary3/air930/mintsData"
 driveReferenceLabel: "googleDrivePalasStream"
