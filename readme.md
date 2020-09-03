@@ -234,7 +234,11 @@ e/n/d/r/c/s/q&gt;
 
 Usually with Mints Projects read only previledges are set as a precation. The final inputs for the rclone configuration can be kept as defaualt. 
 
-##### Example shell script for Rclone 
+### Rsync 
+The code also needs rsync installed on your PC. ```sudo apt install rsync grsync```
+
+
+##### Example shell script that downloads palas data in its raw form using both Rclone and rsync togeather.
 
 ```
 rclone -v sync palasStreamGoogleDrive:palasData/ /media/teamlary/Team_Lary_2/palasStreamPre/
