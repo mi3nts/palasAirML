@@ -251,14 +251,14 @@ Once Rclone is installed the YAML(mintsDefinitions.yaml) file needs to be modifi
 │   │       ├── PS001_palas2Mat.m
 </pre>
 
-Please choose a directory where you need to create the mints data files with the name 'mintsData'. Then point to the said folder on the yaml file under the label 'dataFolder'. The Rclone token for the google drive should be put under 'driveReferenceLabel'. Most Mints Data resampled within a pre defined period for synchronizing multiple data samples. To do so the data should be resampled to a unique time period. For the palas data its fit to resample to a period of 30 seconds. As such 30 can be put under timeSpan. An example implimentation of the YAML file is given below and is also given on the Repo. 
+Please choose a directory where you need to create the mints data files with the name 'mintsData'. Then point to the said folder on the yaml file under the label 'dataFolder'. The Rclone token for the google drive should be put under 'driveReferenceLabel'. Most Mints Data is resampled within a pre defined period for synchronizing multiple data samples. To do so the data should be resampled to a unique time period. For the palas data and mints Air Monitoring data sources its fit to resample to a period of 30 seconds. As such 30 can be put under timeSpan. An example implimentation of the YAML file is given below and is also given on the Repo. 
 ```
 dataFolder: "/media/teamlary/teamlary3/air930/mintsData"
 driveReferenceLabel: "googleDrivePalasStream"
 timeSpan: 30
 ```
 
-Once the YAML file is updated you can run the 'PS001_palas2Mat.m' file under matlab. This should result in creating two .mat files for which concatinates all palas files from the Mints Ground Vehicle. The files are named 'palaceStream.mat' and 'palas.mat'.
+Once the YAML file is updated you can run the 'PS001_palas2Mat.m' file under matlab **(Make sure you point to the proper YAML file on the matlab script)**. This should result in creating two .mat files for which concatinates all palas files from the Mints Ground Vehicle. The files are named 'palaceStream.mat' and 'palas.mat'.
 <pre>── <font color="#729FCF"><b>mintsData</b></font>
 │   ├── <font color="#729FCF"><b>referenceMats</b></font>
 │   │   └── <font color="#729FCF"><b>palas</b></font>
