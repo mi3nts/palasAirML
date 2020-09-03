@@ -142,7 +142,7 @@ client_id&gt;   </pre>
 
 At this point if you havent set up a client ID go to [https://rclone.org/drive/#making-your-own-client-id] and follow the insturctions given to gain a client ID and a secret ID. 
 Once you know the ID you can proceed in entering client and secret IDs. 
-**Note: xxxxx and yyyyy are only given as examples for client ID and and client Secret.**
+**Note: xxxxx and yyyyy are only given as examples for client ID and client Secret.**
 
 <pre>Google Application Client Id
 Setting your own is recommended.
